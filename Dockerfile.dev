@@ -1,13 +1,13 @@
-FROM node:alpine
+FROM juristr/angular-ci-build:1.0.0
 
 WORKDIR /app
 
 COPY ./package.json .
 
-RUN npm install
+RUN npm install --silent
 
 COPY . .
 
 EXPOSE 80 4200
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "test"]
