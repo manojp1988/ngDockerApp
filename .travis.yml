@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -f Dockerfile.dev -t ngdockerapp-dev:latest .
 script:
-  - docker run ngdockerapp-dev
+  - docker run ngdockerapp-dev npm test
